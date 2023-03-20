@@ -1,0 +1,475 @@
+.container{
+  background-color: #FBF9F8;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+  padding: 3vw;
+  font-weight: 401;
+  font-family: 'Inter', sans-serif;
+  /* transition-duration: .5s; */
+}
+
+#darkBackground{
+  background-color: #030807;
+  color: #FBF9F8;
+  /* transition-duration: .5s; */
+}
+
+
+.leftSide{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.currentlyTrackingText{
+  font-size: 2.7rem;
+  text-align: center;
+  margin-bottom: 4vh;
+}
+
+.lastUpdatesText{
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 0vh;
+  margin-top: 2vh;
+  margin-bottom: -1.5vh;
+  width: 59vw;
+}
+
+.itemContainer{
+  display: flex;
+  flex-direction: column;
+  background-color: #D2D7C6;
+  border-radius: 15px;
+  height: 65vh;
+  /* transition-duration: .5s; */
+}
+
+#lightGreen{
+  background-color: #223430;
+  /* transition-duration: .5s; */
+}
+
+
+.trackingItems{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 2vh;}
+
+.trackingItem{
+  display: flex;
+  flex-direction: row;
+  height: 9vw;
+  border-radius: 13px;
+  align-items: center;
+  gap: 1.5vw;
+  font-size: 2.2rem;
+  background-color: transparent;
+  z-index: 3;
+  }
+
+.trackingItem:hover{
+  background-color: #b4baa7;
+  cursor: pointer;
+}
+
+.trackingItemAlt{
+  display: flex;
+  flex-direction: row;
+  height: 9vw;
+  border-radius: 13px;
+  align-items: center;
+  gap: 1.5vw;
+  font-size: 2.2rem;
+  background-color: transparent;
+  z-index: 3;
+}
+
+.trackingItemAlt:hover{
+  background-color: #1F2F2B;
+  cursor: pointer;
+}
+
+.trackingIcon{
+  border-radius: 100%;
+  width: 7.5vw;
+  height: 7.5vw;
+  margin-left: .5vw;
+  object-fit: cover;
+}
+
+/* .trackingNotificationsContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+} */
+
+.trackingText{
+  font-size: 2.5rem;
+  margin-top: 2.5vh;
+  margin-left: .5vw;
+  margin-bottom: 1.5vh;
+}
+
+.notificationsText{
+  font-size: 2.5rem;
+  margin-left: .5vw;
+
+}
+
+.buttonContainer{
+  margin-top: 4vh;
+  display: flex;
+  flex-direction: row;
+  width: 32.6vw;
+  /* background-color: aqua; */
+  gap: 2vw;
+}
+
+.icon1{
+  position: absolute
+}
+
+.circleIcon{
+  position: relative;
+  fill: #D2D7C6;
+}
+
+.playIcon{
+  position: relative;
+  margin-top: -13.5vh;
+  margin-left: 1.4vw;
+}
+
+/* .playPauseIcon2{
+  position: relative;
+} */
+
+.pauseIcon{
+  position: relative;
+  margin-top: -13.7vh;
+  margin-left: 1.2vh;
+}
+
+.lightModeToggle{
+  position: relative;
+  margin-left: 0vh;
+}
+
+.toggleCircle1{
+  position: relative;
+  margin-top: 0vh;
+  margin-left: 0vh;
+}
+
+.toggleSquare{
+  margin-top: -83px;
+  margin-left: 2.2vh;
+}
+
+.toggleCircle2{
+  position: relative;
+  margin-top: -83px;
+  margin-left: 6vh;
+}
+
+.toggleCircle3{
+  position: relative;
+  margin-top: -9vh;
+  margin-left: 1vh;
+  /* transition-duration: .5s; */
+
+}
+
+.toggleCircle4{
+  position: relative;
+  margin-top: -9vh;
+  margin-left: 6.5vh;
+  /* transition-duration: .5s; */
+}
+
+
+.rightSide{
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  gap: 0vw;
+}
+
+.updateContainer{
+  margin-top: 8vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #D2D7C6;
+  border-radius: 15px;
+  height: 79vh;
+  width: 59vw;
+}
+
+.refreshesEvery2MinutesContainer{
+  display: flex;
+  flex-direction: column;
+  font-size: 2.5rem;
+  gap: 2.0vw;
+  /* margin-top: 2.5vh; */
+  margin-left: 1.5vw;
+  flex: end;
+  position: fixed;
+  margin-top: 42vw;
+}
+
+.iconButton1{
+  background-color: transparent;
+  border: none;
+  width: 115px;
+  height: 115px;
+}
+
+.iconButton3{
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 100px;
+  margin-top: 1.3vh;
+}
+
+
+.blackOverlay{
+  width: 110vw;
+  height: 110vh;
+  position: fixed;
+  background-color: black;
+  z-index: 1;
+  opacity: .3;
+  margin-top: -12vh;
+  margin-left: -12vh;
+}
+
+.editContainer{
+  width: 32.6vw;
+  height: 72vh;
+  background-color: #b4baa7;
+  position: fixed;
+  z-index: 3;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.editContainerIcon{
+  width: 7.5vw;
+  height: 7.5vw;
+  border-radius: 100%;
+  background-color: gray;
+  margin: 1.5vw;
+  object-fit: cover;
+}
+
+.Subreddit{
+  font-size: 2.5rem;
+  margin: 1.5vw;
+}
+
+.subredditInput{
+  width: 31vw;
+  height: 4vw;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+  border: none;
+  font-weight: 401;
+  font-family: 'Inter', sans-serif;
+  font-size: 2.3rem;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-left: 10px;
+  background-color: #FBF9F8;
+
+}
+
+.subredditInput:focus, input:focus{
+  outline: none;
+}
+
+.SaveAlertButton{
+  width: 31vw;
+  height: 5vw;
+  background-color: #FBF9F8;
+  margin: .8vw;
+  border-radius: 15px;
+  border: none;
+  text-align: center;
+  font-weight: 401;
+  font-family: 'Inter', sans-serif;
+  font-size: 2.3rem;
+  line-height: 4vw;
+  margin-top: 4vw;
+}
+
+.SaveAlertButton:focus, input:focus{
+  outline: none;
+}
+
+.SaveAlertButton:hover{
+  cursor: pointer;
+  z-index: 2
+}
+
+.minusIcon{
+  position: relative;
+  margin-top: -7.1vh;
+  margin-left: .65vw;
+  z-index: -5;
+}
+
+.circleIcon5{
+  z-index: 4;
+}
+
+.minusCircle{
+  position: relative;
+  fill: #D2D7C6;
+  z-index: -5;
+}
+
+.deleteIcon{
+  margin-top: -1.2vh;
+  margin-left: 6vw;
+  z-index: 20;
+}
+
+.minusIcons{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 8.7vh;
+  position: fixed;
+  z-index: 4;
+  margin-top: 0vw;
+  /* margin-left: 18.8vw; */
+  width: 1px;
+}
+
+.minusIcons:Hover{
+  cursor: pointer;
+}
+
+.iconAndDelete{
+  display: flex;
+  flex-direction: row;
+}
+
+.resetAlertButton{
+  width: 20vw;
+  height: 5vw;
+  background-color: #FBF9F8;
+  margin: .8vw;
+  border-radius: 15px;
+  border: none;
+  text-align: center;
+  font-weight: 401;
+  font-family: 'Inter', sans-serif;
+  font-size: 2.3rem;
+  line-height: 4vw;
+  margin-top: 3vw;
+}
+
+.trackingItemEmpty{
+  display: flex;
+  flex-direction: row;
+  height: 9vw;
+  border-radius: 13px;
+  align-items: center;
+  gap: 1.5vw;
+  font-size: 2.2rem;
+  background-color: #b4baa7;
+  z-index: 3;
+}
+
+#darkGreen{
+  background-color: #1F2F2B;
+  /* transition-duration: .5s; */
+}
+
+.trackingItemEmpty:hover{
+  cursor: pointer;
+}
+
+.postingsContainer{
+  overflow-y:auto;
+  height: 58.5vh;
+  width: 56.5vw;
+  font-weight: 399;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  padding: 3vh;
+  margin-top: 1vh;
+  line-height: 4.5vh;
+}
+
+.posting{
+  font-weight: 399;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  background-color: transparent;
+  color:#030807;
+  text-decoration: none;
+}
+
+.spacing{
+  margin-bottom: 2vh;
+}
+
+#darkGreenContainer{
+  background-color: #1F2F2B;
+  color: #FBF9F8;
+}
+
+.resetAlertButtonDark{
+  width: 20vw;
+  height: 5vw;
+  background-color: #030807;
+  margin: .8vw;
+  border-radius: 15px;
+  border: none;
+  text-align: center;
+  font-weight: 401;
+  font-family: 'Inter', sans-serif;
+  font-size: 2.3rem;
+  line-height: 4vw;
+  margin-top: 3vw;
+  color: #FBF9F8;
+
+}
+
+.subredditInputDark{
+  width: 31vw;
+  height: 4vw;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+  border: none;
+  font-weight: 401;
+  font-family: 'Inter', sans-serif;
+  font-size: 2.3rem;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-left: 10px;
+  background-color: #030807;
+  color: #FBF9F8;
+
+}
+
+
+.subredditInputDark:focus, input:focus{
+  outline: none;
+}
+
+#whiteColor{
+  color: #FBF9F8 ;
+}
