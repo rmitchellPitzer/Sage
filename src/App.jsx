@@ -317,12 +317,19 @@ function App() {
       {
         let newBackendState = backendState;
         let splitBackend = newBackendState.split("\n");
+        console.log(dataReceived[0]);
+        console.log(splitBackend[6]);
         if (dataReceived[0] > splitBackend[6]){
           timestamp1 = dataReceived[0];
+          console.log(dataReceived[0])
+          console.log(splitBackend[6])
+          console.log(dataReceived[2])
+
           titlesAndUrls.push([dataReceived[2], dataReceived[1]])
           if (NotificationsOn){
             let notificationTitle = 'New ' + searches[0] + ' post in ' + subreddits[0]
             let notificationBody = dataReceived[2]
+            console.log("Sending notifications for ", dataReceived[2])
             sendNotification({ title: notificationTitle, body: notificationBody });
           }
         } 
@@ -332,13 +339,19 @@ function App() {
       {
         let newBackendState = backendState;
         let splitBackend = newBackendState.split("\n");
+        console.log(dataReceived[0]);
+        console.log(splitBackend[7]);
         if (dataReceived[0] > splitBackend[7]){
+          console.log(dataReceived[0])
+          console.log(splitBackend[7])
+          console.log(dataReceived[2])
           timestamp2 = dataReceived[0];
           titlesAndUrls.push([dataReceived[2], dataReceived[1]])
 
           if (NotificationsOn){
             let notificationTitle = 'New ' + searches[1] + ' post in ' + subreddits[1]
             let notificationBody = dataReceived[2]
+            console.log("Sending notifications for ", dataReceived[2])
             sendNotification({ title: notificationTitle, body: notificationBody });
           }       
         } 
@@ -348,13 +361,20 @@ function App() {
       {
         let newBackendState = backendState;
         let splitBackend = newBackendState.split("\n");
+        console.log(dataReceived[0]);
+        console.log(splitBackend[8]);
         if (dataReceived[0] > splitBackend[8]){
+          console.log(dataReceived[0])
+          console.log(splitBackend[8])
+          console.log(dataReceived[2])
           timestamp3 = dataReceived[0];
           titlesAndUrls.push([dataReceived[2], dataReceived[1]])
+          
 
           if (NotificationsOn){
             let notificationTitle = 'New ' + searches[2] + ' post in ' + subreddits[2]
             let notificationBody = dataReceived[2]
+            console.log("Sending notifications for ", dataReceived[2])
             sendNotification({ title: notificationTitle, body: notificationBody });
           }
         } 
@@ -364,8 +384,13 @@ function App() {
         splitBackend[6] = timestamp1
         splitBackend[7] = timestamp2
         splitBackend[8] = timestamp3
+        console.log("The new items to push are ")
+        console.log(titlesAndUrls)
 
         if (titlesAndUrls.length > 0){
+          console.log("The titles and urls are greater than 0 ")
+          console.log(titlesAndUrls)
+
           let newItems = items
           newItems = titlesAndUrls.concat(newItems)
           setItems(newItems);
@@ -380,6 +405,7 @@ function App() {
 
 
   function makeQuery(subredditName, searchTerm){
+    console.log("New Query for ", searchTerm)
     if (subredditName !== "" && searchTerm !== ""){
       let requestURL = 'https://www.reddit.com/r/' + subredditName + "/search.json?q=" + searchTerm.replaceAll(" ", "%20") + "&restrict_sr=on&sort=new&t=all";
     return fetch(requestURL).then(function (response) {
